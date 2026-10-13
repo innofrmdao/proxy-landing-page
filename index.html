@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ProxyForge — Fast, reliable residential & datacenter proxies. Pay as you go. Start free." />
+  <title>ProxyForge · Fast & Reliable Proxies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-mark">⬢</span> Proxy<span class="logo-accent">Forge</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#locations">Locations</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="#" class="btn btn-ghost" data-toast="Sign-in demo — no backend yet.">Sign in</a>
+        <a href="#pricing" class="btn btn-primary">Get started</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          99.9% uptime · Instant delivery
+        </div>
+        <h1 class="hero-title">
+          Fast, reliable <span class="gradient-text">proxies</span> for any task.
+        </h1>
+        <p class="hero-subtitle">
+          Datacenter, residential, and mobile IPs from 150+ countries.
+          Pay as you go. No hidden fees. Start free in seconds.
+        </p>
+        <div class="hero-actions">
+          <a href="#pricing" class="btn btn-primary btn-lg">Start free trial →</a>
+          <a href="#features" class="btn btn-outline btn-lg">Explore features</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num" data-count="10000">0</div>
+            <div class="stat-label">Active proxies</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" data-count="150">0</div>
+            <div class="stat-label">Countries</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" data-count="999" data-suffix="%">0</div>
+            <div class="stat-label">Uptime</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="proxy-panel">
+          <div class="panel-header">
+            <div class="panel-dots"><span></span><span></span><span></span></div>
+            <div class="panel-title">Live Proxy Stream</div>
+            <div class="panel-status"><span class="pulse"></span> connected</div>
+          </div>
+          <div class="proxy-list" id="proxyList"></div>
+          <div class="panel-footer">
+            <div class="meter"><div class="meter-bar"></div></div>
+            <span class="panel-hint">Streaming 10,240 proxies · 42 ms avg</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUSTED -->
+  <section class="trusted">
+    <div class="container">
+      <p class="trusted-label">Trusted by teams at</p>
+      <div class="trusted-logos">
+        <span>◆ Nimbus</span><span>▲ Vertex</span><span>● Lumen</span>
+        <span>◈ Atlas</span><span>■ Orbit</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Features</span>
+        <h2 class="section-title">Everything you need, nothing you don't.</h2>
+        <p class="section-sub">Built for developers, scrapers, and privacy-focused teams.</p>
+      </div>
+      <div class="features-grid">
+        <article class="feature-card"><div class="feature-icon">🌍</div><h3>Global network</h3><p>Residential, ISP, datacenter, and mobile IPs across 150+ countries.</p></article>
+        <article class="feature-card"><div class="feature-icon">⚡</div><h3>Ultra-low latency</h3><p>42 ms average response time with 99.9% uptime backed by SLA.</p></article>
+        <article class="feature-card"><div class="feature-icon">🔒</div><h3>Secure & private</h3><p>Encrypted tunnels, zero logs, and IP whitelist authentication.</p></article>
+        <article class="feature-card"><div class="feature-icon">💸</div><h3>Pay as you go</h3><p>No minimums, no monthly lock-in. Only pay for bandwidth used.</p></article>
+        <article class="feature-card"><div class="feature-icon">🧩</div><h3>Easy integration</h3><p>REST API, SDKs for Python, Node.js, Go, and cURL snippets.</p></article>
+        <article class="feature-card"><div class="feature-icon">📊</div><h3>Live dashboard</h3><p>Monitor usage, rotate IPs, and manage sub-users in real time.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section section-alt" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Pricing</span>
+        <h2 class="section-title">Simple, transparent pricing.</h2>
+        <p class="section-sub">Start free. Scale when you're ready. Cancel anytime.</p>
+        <div class="billing-toggle" id="billingToggle">
+          <button class="toggle-btn active" data-period="monthly">Monthly</button>
+          <button class="toggle-btn" data-period="yearly">Yearly <span class="save">-20%</span></button>
+        </div>
+      </div>
+      <div class="pricing-grid">
+        <article class="price-card">
+          <h3 class="price-name">Starter</h3>
+          <p class="price-desc">For testing and small projects.</p>
+          <div class="price-amount">
+            <span class="currency">$</span>
+            <span class="price" data-monthly="0" data-yearly="0">0</span>
+            <span class="period">/ first month</span>
+          </div>
+          <ul class="price-features">
+            <li>✓ 100 MB bandwidth</li><li>✓ 5 concurrent threads</li>
+            <li>✓ Shared datacenter IPs</li><li>✓ Email support</li>
+          </ul>
+          <a href="#" class="btn btn-outline btn-block" data-toast="Starter plan — free demo signup!">Get started free</a>
+        </article>
+
+        <article class="price-card price-card-featured">
+          <div class="featured-badge">Most popular</div>
+          <h3 class="price-name">Pro</h3>
+          <p class="price-desc">For growing teams and serious scraping.</p>
+          <div class="price-amount">
+            <span class="currency">$</span>
+            <span class="price" data-monthly="29" data-yearly="23">29</span>
+            <span class="period">/ month</span>
+          </div>
+          <ul class="price-features">
+            <li>✓ 10 GB bandwidth</li><li>✓ 50 concurrent threads</li>
+            <li>✓ Residential + datacenter</li><li>✓ Country targeting</li>
+            <li>✓ Priority chat support</li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-block" data-toast="Pro plan selected — you'll love it! (demo)">Choose Pro</a>
+        </article>
+
+        <article class="price-card">
+          <h3 class="price-name">Enterprise</h3>
+          <p class="price-desc">Custom for high-volume operations.</p>
+          <div class="price-amount">
+            <span class="currency">$</span>
+            <span class="price" data-monthly="99" data-yearly="79">99</span>
+            <span class="period">/ month</span>
+          </div>
+          <ul class="price-features">
+            <li>✓ 50 GB bandwidth</li><li>✓ 200 concurrent threads</li>
+            <li>✓ Dedicated IP pools</li><li>✓ Custom geo-targeting</li>
+            <li>✓ 24/7 priority support</li>
+          </ul>
+          <a href="#" class="btn btn-outline btn-block" data-toast="Sales will reach out shortly. (demo)">Contact sales</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATIONS -->
+  <section class="section" id="locations">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Network</span>
+        <h2 class="section-title">Proxies where you need them.</h2>
+        <p class="section-sub">Instant access to IPs across 6 continents, 150+ countries.</p>
+      </div>
+      <div class="locations-grid">
+        <div class="loc-card"><span class="flag">🇺🇸</span><h4>United States</h4><p>4,210 IPs · 18 ms</p></div>
+        <div class="loc-card"><span class="flag">🇩🇪</span><h4>Germany</h4><p>2,180 IPs · 24 ms</p></div>
+        <div class="loc-card"><span class="flag">🇬🇧</span><h4>United Kingdom</h4><p>1,640 IPs · 27 ms</p></div>
+        <div class="loc-card"><span class="flag">🇸🇬</span><h4>Singapore</h4><p>1,320 IPs · 31 ms</p></div>
+        <div class="loc-card"><span class="flag">🇯🇵</span><h4>Japan</h4><p>1,090 IPs · 35 ms</p></div>
+        <div class="loc-card"><span class="flag">🇧🇷</span><h4>Brazil</h4><p>820 IPs · 48 ms</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-alt" id="faq">
+    <div class="container container-narrow">
+      <div class="section-header">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Questions? Answered.</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item"><summary>What's the difference between residential and datacenter proxies?</summary><p>Residential proxies use real ISP-assigned IPs (harder to detect), while datacenter proxies are faster and cheaper but easier to identify. We offer both, plus mobile.</p></details>
+        <details class="faq-item"><summary>Can I try before paying?</summary><p>Yes — every new account gets 100 MB free bandwidth with no credit card required.</p></details>
+        <details class="faq-item"><summary>How fast is setup?</summary><p>Instant. Your proxies are available the moment you sign up and grab your API key.</p></details>
+        <details class="faq-item"><summary>Do you keep logs?</summary><p>No. We operate a strict zero-log policy. Only your bandwidth usage is tracked for billing.</p></details>
+        <details class="faq-item"><summary>What payment methods do you accept?</summary><p>All major cards, PayPal, and crypto (BTC, ETH, USDT).</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container cta-inner">
+      <div class="cta-content">
+        <h2>Start your free trial today.</h2>
+        <p>100 MB free bandwidth. No credit card. Cancel anytime.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="#pricing" class="btn btn-white btn-lg">Claim free trial →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo"><span class="logo-mark">⬢</span> Proxy<span class="logo-accent">Forge</span></a>
+        <p>Simple proxies for developers and teams.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col"><h4>Product</h4><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#locations">Locations</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="#">About</a><a href="#">Blog</a><a href="#">Careers</a></div>
+        <div class="footer-col"><h4>Legal</h4><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Acceptable use</a></div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2025 ProxyForge. All rights reserved.</span>
+      <span>Made with ⬢ for the web</span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
